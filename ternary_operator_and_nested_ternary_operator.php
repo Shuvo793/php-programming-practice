@@ -13,7 +13,7 @@ echo "\n"; */
  
 //replace in ternary operator
  
-$m = (12==$n) ? "twelve" : (10==$n) ? "ten" : "no match";
+$m = (12==$n) ? "twelve" : ((10==$n) ? "ten" : "no match");
 
 echo $m;
 

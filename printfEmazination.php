@@ -32,7 +32,7 @@ echo "\n";
 /* $n=23; //00023
 $m=12345;//12345
 $p=156;//00156
-printf("%05d",$n);
+printf("%05d",$n); 
 echo "\n";
 printf($m);
 echo "\n";

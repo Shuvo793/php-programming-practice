@@ -19,21 +19,25 @@ class RentACar{
         if(!self::$obj) {
             self::$obj = new Car();// self holo static er jonno this er motoe
         }
-        return self::$obj;
+        return self::$obj ;
+        
+        
     }
 }
 class Passanger1{
     function ride(){
         echo "I am Passanger 1. \n";
-        $myCar = new Car();
-        $myCar->honk();
+        $myCar = RentACar::getCar();
+        $myCar -> honk();
+        
     }
 }
 class Passanger2{
     function ride(){
         echo "I am Passanger 2. \n";
-        $myCar = new Car();
-        $myCar->honk();
+        $myCar = RentACar::getCar();
+        $myCar->honk ();
+    
     }
 }
 $p1 = new Passanger1();
@@ -43,3 +47,22 @@ $p2->ride();
 
 //result same asbe bt jodi main operation |^| ta static na kortam tahole ans same asto na
 
+
+// ex : 2
+
+class shuvo {
+    private static $name;
+    public function __construct(){
+        if(!self::$name){
+            self::$name = $this ;
+            echo " shuvo into the function\n";
+        }else{
+            echo "shuvo already exists\n";
+        }
+    }
+}
+
+$shuvo = new shuvo();
+$shuvo = new shuvo();
+$shuvo = new shuvo();
+$shuvo = new shuvo();

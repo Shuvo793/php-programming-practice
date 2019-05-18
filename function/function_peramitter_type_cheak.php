@@ -16,18 +16,39 @@ echo "{$x} is value". factorial($x); */
 
 //type cheaking
 
- function factorial(int $n){
+
+function factorial(int $n){
     $result=1;
     for($i=$n;$i>1;$i--){
-        $result = $result * $i;
+        $result = $result * $i; 
     }
     return $result;
-    
 }
 
-$x='abc';
-echo "{$x} is value". factorial($x);
- 
+$x=10;
+
+echo "$x = ".factorial($x);
+
+
+//if jodi valu sting hoe tahole convert kore nite hobe 
+
+/* function factorial($n){
+    $result=1;
+    for($i=$n;$i>1;$i--){
+        $result = $result * $i; 
+    }
+    return $result;
+}
+
+$x='a';
+$b= (int)hexdec($x);
+echo "$b = ".factorial($b); */
+
+
+
+
+
+
 
     
 
